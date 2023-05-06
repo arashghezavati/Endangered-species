@@ -1,0 +1,171 @@
+/*================Default:Mobile First================== */
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 2rem;
+}
+
+.animals-small{
+border: 5px solid #ccc;
+border-radius: 2rem;
+}
+
+h1, h2 {
+    font-family: oswald, helvetica, "arial narrow", sans-serif;
+}
+ 
+h1 {
+  font-weight: 700;
+  font-size: 6rem;
+  margin-top: 0;
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+}
+ 
+h2 {
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: .75rem;
+  margin-top: 2rem;
+  line-height: 1;
+}
+ 
+h3 {
+  font-family: "Roboto Slab", courier, "courier new", monospace;
+  font-weight: 400;
+  margin: 0;
+  font-size: .75rem;
+}
+ 
+a {
+  font-family: "Arial Medium", Helvetica, sans-serif;
+}
+
+/*============Links and menus==============*/
+a{
+font-family: Arial, Helvetica, sans-serif;
+}
+nav ul{
+    list-style-type: none;
+    margin-left: 0;
+    margin-top: 0;
+    padding-left: 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2px;
+}
+nav a{
+    font-size: 1.4rem;
+    text-decoration: none;
+    line-height: 2;
+    color: black;
+    background-color: #b5d8e7;
+    display: block;
+
+}
+
+nav a:hover{
+    background-color: #bbb;
+    color: white;
+}
+
+.animals-small,.animals-big{
+    border: 1px solid #555;
+    margin-bottom: 0.5rem;
+    padding: 0.2rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.animals-big{
+    margin: bottom 0;
+}
+
+input, label, textarea{
+display: block;
+}
+
+input,textarea{
+    border: 1px, solid, #555;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+textarea{
+    min-height: 7rem;
+}
+
+/* ====================media queries============= */
+/* =======================medium or tablet size============= */
+@media screen and (min-width:800px){
+
+    .wrapper{
+        max-width: 800px;
+    }
+
+    nav ul{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .wrapper{
+        min-width: 800px;
+        margin: auto;
+    }
+
+    .animals-mamals,
+    .animals-reptiles,
+    .animals-birds{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 1rem;   
+     }
+     .animals-mamals .animals-small:nth-of-type(1),
+     .animals-reptiles, .animals-small:nth-of-type(1)
+     .animals-birds .animals-small:nth-of-type(1){
+ 
+         grid-column: span 2;
+ 
+     }
+
+     section h2{
+        grid-column: span 2;
+     }
+}
+
+/* end of 800px query */
+
+/* =======large size or desktop============= */
+@media screen and (min-width: 1200px) {
+    nav ul {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .wrapper{
+        max-width: 2400px;
+    }
+
+    .animals-mamals,
+    .animals-reptiles,
+    .animals-birds{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .animals-mamals .animals-small:nth-of-type(1),
+    .animals-reptiles, .animals-small:nth-of-type(1)
+    .animals-birds .animals-small:nth-of-type(1){
+
+        grid-column: span 1;
+
+    }
+
+    section h2{
+        grid-column: span 3;
+    }
+  }
+
+  
